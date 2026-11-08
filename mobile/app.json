@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "CloudySpaceGolf",
+    "slug": "cloudyspacegolf",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#070D18"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "CloudySpaceGolf requires camera access to capture gaps in the clouds and confirm celestial positions.",
+        "NSLocationWhenInUseUsageDescription": "Location is needed to calculate accurate local celestial coordinates and nearby gap alerts.",
+        "NSMotionUsageDescription": "Motion sensors are used to align your phone reticle with stars and planets."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#070D18"
+      },
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "HIGH_SAMPLING_RATE_SENSORS"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow CloudySpaceGolf to view the sky through cloud gaps."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow CloudySpaceGolf to use your location for celestial coordinates."
+        }
+      ]
+    ]
+  }
+}
